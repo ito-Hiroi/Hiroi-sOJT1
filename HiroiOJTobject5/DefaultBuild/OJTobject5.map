@@ -1,0 +1,91 @@
+Renesas Optimizing Linker (V2.07.00 )             19-Dec-2017 17:38:15
+
+*** Options ***
+
+-subcommand=DefaultBuild\OJTobject5.clnk
+-library=DefaultBuild\OJTobject5.lib
+-input=DefaultBuild\dbsct.obj
+-input=DefaultBuild\intprg.obj
+-input=DefaultBuild\main.obj
+-input=DefaultBuild\resetprg.obj
+-input=DefaultBuild\sbrk.obj
+-input=DefaultBuild\vecttbl.obj
+-input=DefaultBuild\hardwaresetup.obj
+-input=DefaultBuild\swled.obj
+-input=DefaultBuild\pwmled.obj
+-input=DefaultBuild\switch.obj
+-input=DefaultBuild\temp.obj
+-noprelink
+-output=DefaultBuild\OJTobject5.abs
+-list=DefaultBuild\OJTobject5.map
+-nooptimize
+-start=B_1,R_1,B_2,R_2,B,R,SU,SI/04,PResetPRG/0FFFE0000,C_1,C_2,C,C$DSEC,C$BSEC,C$INIT,C$VTBL,C$VECT,D_1,D_2,D,P,PIntPRG,W_1,W_2,W,L/0FFFE0100,FIXEDVECT/0FFFFFFD0
+-rom=D=R,D_1=R_1,D_2=R_2
+-nologo
+-end
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+B_1
+                                  00000004  0000000b         8   1
+R_1
+                                  0000000c  0000000d         2   1
+B_2
+                                  0000000e  0000000e         0   1
+R_2
+                                  0000000e  0000000f         2   2
+B
+                                  00000010  0000041b       40c   4
+R
+                                  0000041c  00000423         8   4
+SU
+                                  00000424  00000523       100   4
+SI
+                                  00000524  00000823       300   4
+PResetPRG
+                                  fffe0000  fffe0029        2a   1
+C_1
+                                  fffe0100  fffe0100         0   1
+C_2
+                                  fffe0100  fffe0100         0   1
+C
+                                  fffe0100  fffe0133        34   4
+C$DSEC
+                                  fffe0134  fffe0157        24   4
+C$BSEC
+                                  fffe0158  fffe016f        18   4
+C$INIT
+                                  fffe0170  fffe0170         0   1
+C$VTBL
+                                  fffe0170  fffe0170         0   1
+C$VECT
+                                  fffe0170  fffe056f       400   4
+D_1
+                                  fffe0570  fffe0571         2   1
+D_2
+                                  fffe0572  fffe0573         2   2
+D
+                                  fffe0574  fffe057b         8   4
+P
+                                  fffe057c  fffe0aad       532   1
+PIntPRG
+                                  fffe0aae  fffe0c1f       172   1
+W_1
+                                  fffe0c20  fffe0c20         0   1
+W_2
+                                  fffe0c20  fffe0c20         0   1
+W
+                                  fffe0c20  fffe0c20         0   1
+L
+                                  fffe0c20  fffe0c20         0   1
+$ADDR_C_FFFFFF80
+                                  ffffff80  ffffff83         4   1
+$ADDR_C_FFFFFFA0
+                                  ffffffa0  ffffffaf        10   1
+$ADDR_C_FFFFFFC8
+                                  ffffffc8  ffffffcb         4   1
+FIXEDVECT
+                                  ffffffd0  ffffffff        30   4
