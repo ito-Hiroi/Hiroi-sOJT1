@@ -67,7 +67,7 @@ extern unsigned char Led_State;
 /// PWMのDuty比を減少させる関数
 //*****************************************************************************
 
-void PWM_LOWERING1( void )
+void DUTY_LOWERING( void )
 {
 	MTU3.TGRC = MTU3.TGRA+5;				//Duty比減少
 	if(MTU3.TGRC>=MTU3.TGRB-10){			//Dutyがマイナスにならないように止める
@@ -81,7 +81,7 @@ void PWM_LOWERING1( void )
 //*****************************************************************************
 /// PWMのDUty比を増加させる関数
 //*****************************************************************************
-void PWM_INCREASE1( void )
+void DUTY_INCREASE( void )
 {
 	MTU3.TGRC=MTU3.TGRA-5;					//Duty比増加
 	if(MTU3.TGRC<=100){						//Dutyが100%以上にならないように止める
@@ -119,10 +119,10 @@ void PWM_led( void )
 
 	if((Event_DUTY==MOVEDUTY) && (Led_State == ON)){	//SWがONかつランダム秒経過後
 		if(PWM_NOW == PWM_LOWERING){
-			PWM_LOWERING1();							//Duty比を減らす関数へ（LEDを暗く）
+			DUTY_LOWERING();							//Duty比を減らす関数へ（LEDを暗く）
 		}
 		else if(PWM_NOW == PWM_INCREASE){
-			PWM_INCREASE1();							//Duty比を増やす関数へ（LEDを明るく）
+			DUTY_INCREASE();							//Duty比を増やす関数へ（LEDを明るく）
 		}
 	}else {
 		//何もしない
